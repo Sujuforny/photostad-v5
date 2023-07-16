@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+.db-bg {
+  background-color: #f5f8fe;
+}
+#html-content{
+  font-family: 'Kantumruy Pro', sans-serif;
+
+}
+
+/* btn switch */
+.switchh {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switchh input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked+.slider {
+  background-color: #522ba7;
+}
+
+input:checked+.slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+/* ===========home page ============*/
+.watermark {
+  background: linear-gradient(135deg, #FFF5C3 0%, #9452A5 100%);
+  border-radius: 26px;
+}
+
+.certificate {
+  background: linear-gradient(135deg, #FAD7A1 0%, #E96D71 100%);
+  border-radius: 26px;
+}
+
+/* asige width */
+#aside{
+  width: 500px !important;
+}
+
+.btn-util {
+  background-color: #E85854 !important;
+  padding: 10px !important;
+  border-radius: 16px !important;
+}
+
+@keyframes countdown {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.animate-countdown {
+  animation: countdown 5s linear forwards;
+}
